@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OOCSS Example - Improved</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <style>
+    /* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Button component (structure) */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button variations (skin) */
+.btn--primary {
+  background-color: #3498db;
+  color: #fff;
+  border-color: #2980b9;
+}
+
+.btn--secondary {
+  background-color: #2ecc71;
+  color: #fff;
+  border-color: #27ae60;
+}
+
+.btn--danger {
+  background-color: #e74c3c;
+  color: #fff;
+  border-color: #c0392b;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Card component (structure) */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  max-width: 350px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card__header {
+  margin-bottom: 15px;
+}
+
+.card__title {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.card__body {
+  margin: 15px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Card themes (skin) */
+.card--primary {
+  background-color: #f0f9ff;
+  border-color: #3498db;
+}
+
+.card--secondary {
+  background-color: #eafaf1;
+  border-color: #2ecc71;
+}
+
+.card--warning {
+  background-color: #fef6e7;
+  border-color: #f39c12;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+  </style>
+
+  <section class="container">
+    <div class="grid grid--2-cols">
+      <article class="card card--primary">
+        <header class="card__header">
+          <h1 class="card__title">Primary Card</h1>
+        </header>
+        <p class="card__body">This is a reusable card component with a primary theme.</p>
+        <footer class="card__footer">
+          <button class="btn btn--primary">Primary Action</button>
+          <button class="btn btn--secondary">Secondary Action</button>
+        </footer>
+      </article>
+
+      <article class="card card--secondary">
+        <header class="card__header">
+          <h1 class="card__title">Secondary Card</h1>
+        </header>
+        <p class="card__body">This card follows a secondary theme but uses the same structure.</p>
+        <footer class="card__footer">
+          <button class="btn btn--primary">Explore</button>
+          <button class="btn btn--secondary">Details</button>
+        </footer>
+      </article>
+    </div>
+  </section>
+
+</body>
+</html>
